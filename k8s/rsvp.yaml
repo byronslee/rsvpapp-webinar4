@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: rsvp-app
-        image: byronslee/rsvpapp
+        image: byronslee/rsvpapp:9e12891424a3d6b467f0ff6ae39d53acf68d8a82
         imagePullPolicy: Always
         livenessProbe:
           httpGet:
