@@ -54,9 +54,9 @@ jobs:
       - run:
           name: Push image
           command: |
-            docker build -t $DOCKERHUB_USERNAME/rsvpapp:$CIRCLE_SHA1 .
+            docker build -t $DOCKERHUB_USERNAME/rsvpapp:$CIRCLE_SHA1  -t $DOCKERHUB_USERNAME/rsvpapp:newest .
             echo $DOCKERHUB_PASSWORD | docker login --username $DOCKERHUB_USERNAME --password-stdin
-            docker push $DOCKERHUB_USERNAME/rsvpapp:$CIRCLE_SHA1    
+            docker push $DOCKERHUB_USERNAME/rsvpapp    
 
 workflows:
   version: 2
